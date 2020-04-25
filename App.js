@@ -16,3 +16,11 @@ export default () => (
       </AppNavigator>
     </ApplicationProvider>
 );
+
+/*TODO: make a navigator go back to the homescreen
+*       Make some sort of map that displays nearby users
+*       Mongo? backend to store what groceries a user would like to buy (Express.js needed probs)
+*          MERN?
+*       Delivery system?
+*       Payment?
+*/
