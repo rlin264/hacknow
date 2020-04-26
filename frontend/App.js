@@ -1,7 +1,8 @@
 import React from 'react';
 import * as eva from '@eva-design/eva';
-import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import { ApplicationProvider, Layout, Text, IconRegistry } from '@ui-kitten/components';
 import {AppNavigator} from './components/Drawer/AppNavigator';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
 
 const HomeScreen = () => (
   <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -10,9 +11,12 @@ const HomeScreen = () => (
 );
 
 export default () => (
-    <ApplicationProvider {...eva} theme={eva.light}>
-      <AppNavigator/>
-    </ApplicationProvider>
+    <>
+      <IconRegistry icons={EvaIconsPack} />
+      <ApplicationProvider {...eva} theme={eva.light}>
+        <AppNavigator/>
+      </ApplicationProvider>
+    </>
 );
 
 /*TODO: make a navigator go back to the homescreen
