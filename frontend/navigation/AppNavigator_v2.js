@@ -4,17 +4,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Drawer, DrawerItem, Layout, Text, Button } from '@ui-kitten/components';
 
+import CommunitiesNav from '../screens/Communities.js';
+
 const Stack = createStackNavigator();
 
 function homeScreen({ navigation }){
-  return (<Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+  return (
+    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
     <Text category='h1'>HOME</Text>
-    <Button
-        title ="Go to Details"
-        onPress={() => navigation.navigate('ph1')}
-      />
-  </Layout>
-);
+    <Button onPress={() => navigation.navigate('YourCommunities')}>
+    Go to communities
+    </Button>
+    </Layout>
+  );
 }
 
 const ph1Screen = () => (
@@ -34,6 +36,7 @@ export const AppNavigator = () => (
   <Stack.Navigator>
     <Stack.Screen name='Home' component={ homeScreen }/>
     <Stack.Screen name='ph1' component={ ph1Screen }/>
+    <Stack.Screen name='YourCommunities' component={ CommunitiesNav }/>
   </Stack.Navigator>
   </NavigationContainer>
 );
