@@ -31,6 +31,9 @@ export default class LoginForm extends Component {
         <TouchableOpacity style={styles.buttonContainer}>
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Login with Facebook</Text>
+        </TouchableOpacity>
         {/*<Button accessoryLeft={FacebookIcon}>Login with Facebook</Button>*/}
       </View>
     );
@@ -56,5 +59,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '700',
     color: '#FFFFFF',
+  },
+  button: {
+    backgroundColor: '#2980b9',
+      paddingVertical : 15,
   },
 });
