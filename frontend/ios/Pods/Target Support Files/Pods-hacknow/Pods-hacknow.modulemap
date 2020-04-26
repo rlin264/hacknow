@@ -1,0 +1,6 @@
+module Pods_hacknow {
+  umbrella header "Pods-hacknow-umbrella.h"
+
+  export *
+  module * { export * }
+}

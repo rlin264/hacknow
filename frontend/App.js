@@ -1,7 +1,7 @@
 import React from 'react';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
-import {AppNavigator} from './components/Drawer/AppNavigator';
+import {AppNavigator} from './navigation/AppNavigator_v2';
 
 const HomeScreen = () => (
   <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
