@@ -53,7 +53,7 @@ class GrocerySearch extends React.Component {
       const textData = text.toUpperCase();
       return itemData.indexOf(textData) > -1
     });
- 
+
     this.setState({
       data: newData,
       text: text
@@ -72,10 +72,10 @@ class GrocerySearch extends React.Component {
   }
   render() {
     return (
- 
+
       <View style={styles.MainContainer}>
- 
-      <TextInput 
+
+      <TextInput
        style={styles.textInput}
        onChangeText={(text) => this.searchData(text)}
        value={this.state.text}
@@ -95,14 +95,14 @@ class GrocerySearch extends React.Component {
 }
 
 const styles = StyleSheet.create({
- 
+
   MainContainer: {
     justifyContent: 'center',
     flex: 1,
     margin: 5,
     maxHeight: 250
   },
- 
+
   row: {
     fontSize: 18,
     padding: 12
@@ -113,7 +113,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#009688',
     borderRadius: 8,
-    backgroundColor: "#FFFF"
+    backgroundColor: "#FFFF",
+    fontSize: 16
   }
 });
 
