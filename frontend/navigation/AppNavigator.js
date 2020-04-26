@@ -1,3 +1,6 @@
+// Creates the stack navigator that moves between the login screen and the main
+// functional screens of the app.
+
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

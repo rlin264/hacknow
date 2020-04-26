@@ -1,4 +1,5 @@
-//first inside navigator - tab containing stack, screen, screen
+// Creates tab navigator that goes along the bottom screen and navigates between
+// the main Your Communities screen, Buy, Request, and Map screens.
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
