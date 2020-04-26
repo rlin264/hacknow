@@ -33,10 +33,7 @@ export default class Dropdown extends Component<Props> {
                     header={
                       <View style={styles.header}>
                         <Text
-                          style={{
-                            fontSize: 16,
-                            color: 'blue',
-                          }}>
+                          style={styles.headerTxt}>
                           {param.title}
                         </Text>
                       </View>
@@ -87,7 +84,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerTxt: {
-    fontSize: 12,
+    fontSize: 24,
     color: 'rgb(74,74,74)',
     marginRight: 60,
     flexWrap: 'wrap',

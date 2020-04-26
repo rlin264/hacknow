@@ -7,9 +7,10 @@ import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Layout, Text, Icon} from '@ui-kitten/components';
 
-import CommunitiesNav from '../screens/Communities.js';
-import Dropdown from '../components/Drawer/BuyPage/Dropdown.js'
+import CommunitiesNav from '../screens/Communities';
+import Dropdown from '../components/Drawer/BuyPage/Dropdown'
 import requestScreen from '../components/Screens/RequestScreen'
+import mapScreen from '../components/Screens/MapScreen'
 
 const Tab = createBottomTabNavigator();
 
@@ -27,12 +28,6 @@ const phBuyScreen = () => (
 const phRequestScreen = () => (
   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
     <Text category='h1'>Request</Text>
-  </Layout>
-);
-
-export const mapScreen = () => (
-  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text category='h1'>MAP</Text>
   </Layout>
 );
 
