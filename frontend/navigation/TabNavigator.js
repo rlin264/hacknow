@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Layout, Text, Icon} from '@ui-kitten/components';
 
 import CommunitiesNav from '../screens/Communities.js';
+import Dropdown from '../components/Drawer/BuyPage/Dropdown.js'
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +40,7 @@ export default Tabs = () => (
 <NavigationContainer independent={true}>
   <Tab.Navigator /*tabBarOptions={{ showIcon: true, showLabel: false }}*/>
     <Tab.Screen name="Communities" component={CommunitiesNav} options={{ tabBarIcon:({color, focused}) => <GroupIcon focused={focused} color={color} />}}/>
-    <Tab.Screen name="Buy" component={phBuyScreen} />
+    <Tab.Screen name="Buy" component={Dropdown} />
     <Tab.Screen name="Request" component={phRequestScreen} />
     <Tab.Screen name="Map" component={mapScreen} />
   </Tab.Navigator>
