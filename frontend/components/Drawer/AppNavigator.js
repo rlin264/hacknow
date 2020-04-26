@@ -2,8 +2,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Drawer, DrawerItem, Layout, Text } from '@ui-kitten/components';
-import mapScreen from '../Screens/MapScreen'
-import requestScreen from '../Screens/RequestScreen'
+import mapScreen from '../Screens/MapScreen';
+import requestScreen from '../Screens/RequestScreen';
+import BuyScreen from '../Screens/BuyScreen.js';
 
 const { Navigator, Screen } = createDrawerNavigator();
 
@@ -26,6 +27,7 @@ const DrawerContent = ({ navigation, state }) => (
     <DrawerItem title='placeholder1' />
     <DrawerItem title='Map Screen' />
     <DrawerItem title='Request Screen' />
+    <DrawerItem title='Buy Screen' />
   </Drawer>
 );
 
@@ -34,6 +36,7 @@ export const DrawerNavigator = () => (
     <Screen name='placeholder1' component={ph1Screen}/>
     <Screen name='Map Screen' component={mapScreen}/>
     <Screen name='Request Screen' component={requestScreen}/>
+    <Screen name='Buy Screen' component={BuyScreen}/>
   </Navigator>
 );
 

@@ -134,6 +134,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -187,8 +188,37 @@ android {
     }
 }
 
+project.ext {
+  set('react-native', [
+    versions: [
+      // Overriding Build/Android SDK Versions
+      android : [
+        minSdk    : 16,
+        targetSdk : 28,
+        compileSdk: 28,
+        buildTools: "28.0.3"
+      ],
+
+      // Overriding Library SDK Versions
+      firebase: [
+        // Override Firebase SDK Version
+        bom           : "21.1.0",
+
+        // Override Crashlytics SDK Version
+        crashlytics   : "2.10.0",
+
+        // Override Crashlytics SDK Version
+        crashlyticsNdk: "2.1.0"
+      ],
+    ],
+  ])
+}
+
+
 dependencies {
     implementation project(':react-native-maps')
+    implementation project(path: ":@react-native-firebase_app")
+    implementation 'com.google.firebase:firebase-firestore:21.4.3'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
@@ -224,3 +254,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
