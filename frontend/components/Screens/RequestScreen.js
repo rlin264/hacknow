@@ -34,15 +34,16 @@ const SearchIcon = (style) => (
 
 class ShoppingCartList extends React.Component {
     
-    constructor(props, shopdata) {
+    constructor(props) {
       super(props);
   
       this.state = {
+        shopData: this.props.shopdata,
         loading: false,
-        data: shopdata,
+        data: this.props.shopdata,
         error: null,
       };
-      this.arrayholder = [];
+      this.arrayholder = this.props.shopdata;
     }
     componentDidMount(){
   
@@ -51,35 +52,24 @@ class ShoppingCartList extends React.Component {
         description: 'Description for Item',
       });
       const mockData = [
-        { id: '1', text: 'Spinach' },
-        { id: '2', text: 'Apples' },
-        { id: '3', text: 'Oranges' },
-        { id: '3', text: 'Oranges' },
-        { id: '3', text: 'Oranges' },
-        { id: '3', text: 'Oranges' },
-        { id: '3', text: 'Oranges' },
+        { quantity: '5', text: 'Spinach' },
+        { quantity: '2', text: 'Apples' },
+        { quantity: '3', text: 'Oranges' },
       ];
-  
+
+      //var joined = this.state.data.concat({id: 'searchText', text: 'inputNumber'});
+      ///this.setState({ data: joined });
+      
       this.setState({
-        data: mockData,
+        data: mockData
       })
       this.arrayholder = mockData;
+      
     }
     GetFlatListItem(name) {
       Alert.alert(name);
     }
-    searchData(text) {
-      const newData = this.arrayholder.filter(item => {
-        const itemData = item.text.toUpperCase();
-        const textData = text.toUpperCase();
-        return itemData.indexOf(textData) > -1
-      });
-   
-      this.setState({
-        data: newData,
-        text: text
-        })
-      }
+
     itemSeparator = () => {
         return (
           <View
@@ -101,7 +91,7 @@ class ShoppingCartList extends React.Component {
           keyExtractor={ (item, index) => index.toString() }
           ItemSeparatorComponent={this.itemSeparator}
           renderItem={({ item }) => <Text style={styles.row}
-          onPress={this.GetFlatListItem.bind(this, item.text)} >{item.text}</Text>}
+        onPress={this.GetFlatListItem.bind(this, item.text)} > Name: {item.text} #: {item.quantity}</Text>}
           style={{ marginTop: 10}} />
   
       </View>
@@ -117,7 +107,7 @@ class requestScreen extends React.Component{
             isModalVisible: false,
             inputNumber: Number,
             searchText: String,
-            shoppingCart: []
+            shoppingCart: [{id: "ide", text: "tests"}]
         };
     }
     onChanged(text){
@@ -138,7 +128,7 @@ class requestScreen extends React.Component{
     onSubmit(){
         var {searchText} = this.state;
         var {inputNumber} = this.state;
-        var joined = this.state.shoppingCart.concat([searchText, inputNumber]);
+        var joined = this.state.shoppingCart.concat({id: "searchText", text: "inputNumber"});
         this.setState({ shoppingCart: joined });
         alert("Added to cart");
     }
@@ -166,7 +156,7 @@ class requestScreen extends React.Component{
                     <Modal isVisible={this.state.isModalVisible}>
                     <View style={{ flex: 1, width: window.width, marginBottom:200, margin: 10, padding:2, alignItems:'center', borderWidth:4, borderColor:'#888', borderRadius:10, backgroundColor:'#fff'}}>
                         <Text>SHOPPING CART</Text>
-                        <ShoppingCartList shopdata = {this.ShoppingCartList}/>
+                        <ShoppingCartList shopdata = {this.state.sshoppingCart}/>
                         <Button onPress={this.toggleModal}> Hide Cart </Button>
                     </View>
                     </Modal>
