@@ -12,13 +12,6 @@ class Communities extends Component {
     return ( //TODO: update styling - make them look like buttons
       <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>I'm a StackNavigator!</Text>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
-        <Text>Logout</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-        onPress={() => this.props.navigation.navigate('Map')}>
-        <Text>Map</Text>
-        </TouchableOpacity>
       </Layout>
       )
   }
