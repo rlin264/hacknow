@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "750040268449",
+    "firebase_url": "https://hacknow-d4b64.firebaseio.com",
+    "project_id": "hacknow-d4b64",
+    "storage_bucket": "hacknow-d4b64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750040268449:android:476a14469fd63028b6fae0",
+        "android_client_info": {
+          "package_name": "com.hacknow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750040268449-578i7u6lhbifcpq3qq6qjj0qlnkc4lvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDdRtAY0QLQJ0tJPuGLiBeVaLuzroMpRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750040268449-578i7u6lhbifcpq3qq6qjj0qlnkc4lvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
