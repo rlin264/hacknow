@@ -12,6 +12,7 @@ export default class Dropdown extends Component<Props> {
       {
         title: 'What time will you go out to shop?',
         body: '1:00',
+        body1: '2:00',
       },
     ],
   };
@@ -48,6 +49,15 @@ export default class Dropdown extends Component<Props> {
                         },
                       ]}>
                       {param.body}
+                    </Text>
+                    <Text
+                        style={[
+                          styles.txt,
+                          {
+                            fontSize: 20,
+                          },
+                        ]}>
+                      {param.body1}
                     </Text>
                   </DropDownItem>
                 );
