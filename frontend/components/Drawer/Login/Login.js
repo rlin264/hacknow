@@ -10,9 +10,9 @@ export default class Login extends Component {
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
-            source={require('../images/hacknow_logo-01.png')}
+            source={require('../../images/hacknow_logo-01.png')}
           />
-          <Text style={styles.title}>HackNow</Text>
+          <Text style={styles.title}>Groceries Next Door</Text>
         </View>
         <View style={styles.formContainer}>
           <LoginForm navigation = {this.props.navigation}/>

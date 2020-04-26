@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Plaform, StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import DropDownItem from 'react-native-drop-down-item';
 
-const IC_ARR_DOWN = require('../../images/arrdown.png');
+const IC_ARR_DOWN = require('../../images/arrdonw.png');
 const IC_ARR_UP = require('../../images/arrowup.png');
 
 type Props = {};
