@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text} from 'react-native';
+import {StyleSheet, View, Image, Text, TextInput} from 'react-native';
 import LoginForm from './LoginForm';
 
 export default class Login extends Component {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: 160,
     textAlign: 'center',
-    opacity: 0.9
+    opacity: 0.9,
   },
   logoContainer: {
     alignItems: 'center',
