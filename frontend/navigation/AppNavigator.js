@@ -10,8 +10,8 @@ const Stack = createStackNavigator();
 
 export const AppNavigator = () => (
 <NavigationContainer>
-  <Stack.Navigator>
-    <Stack.Screen name='Home' component={ Login }/>
+  <Stack.Navigator headerMode='none'>
+    <Stack.Screen name='Log out' component={ Login }/>
     <Stack.Screen name='Your Communities' component={ Tabs }/>
   </Stack.Navigator>
   </NavigationContainer>
