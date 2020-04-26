@@ -6,19 +6,15 @@ import { Drawer, DrawerItem, Layout, Text, Button } from '@ui-kitten/components'
 
 import CommunitiesNav from '../screens/Communities.js';
 import Login from '../components/Drawer/Login/Login.js';
+import Tabs from './TabNavigator.js';
 
 const Stack = createStackNavigator();
 
-function homeScreen({ navigation }){
-  return (
-    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-    <Text category='h1'>HOME</Text>
-    <Button onPress={() => navigation.navigate('YourCommunities')}>
-    Go to communities
-    </Button>
-    </Layout>
-  );
-}
+export const mapScreen = () => (
+  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text category='h1'>MAP</Text>
+  </Layout>
+);
 
 const ph1Screen = () => (
   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -36,8 +32,8 @@ export const AppNavigator = () => (
 <NavigationContainer>
   <Stack.Navigator>
     <Stack.Screen name='Home' component={ Login }/>
-    <Stack.Screen name='ph1' component={ ph1Screen }/>
-    <Stack.Screen name='YourCommunities' component={ CommunitiesNav }/>
+    <Stack.Screen name='Your Communities' component={ CommunitiesNav }/>
+    <Stack.Screen name='Map' component={ mapScreen }/>
   </Stack.Navigator>
   </NavigationContainer>
 );

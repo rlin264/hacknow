@@ -30,7 +30,7 @@ export default class LoginForm extends Component {
           secureTextEntry
           style={styles.input}
         />
-        <TouchableOpacity style={styles.buttonContainer} onPress={() => this.props.navigation.navigate('YourCommunities')}>
+        <TouchableOpacity style={styles.buttonContainer} onPress={() => this.props.navigation.navigate('Your Communities')}>
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
